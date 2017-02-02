@@ -23,7 +23,7 @@ function DataReceive(){
 window.onload = DataReceive;
 //-->
 </SCRIPT>
-
+test
 <?php
 $key=$_GET['text2'];
 $con = mysql_connect('localhost', 'root', '');
