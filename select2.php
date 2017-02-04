@@ -28,29 +28,6 @@ $query = "INSERT INTO inputdata(date,name,place,amount)VALUES('$dateFormat2','$n
 $result = mysql_query($query); 
 ?>
 
-
-
-<?php
-  //http://www.tryphp.net/phpref-operators_comparison/
- mysql_select_db('wateramount', $con);
- $qury1 = mysql_query('SET NAMES utf8', $con);
- $qury1 = mysql_query('SELECT * FROM inputdata');
-  while($table1 = mysql_fetch_assoc($qury1)) {
-   $outputName = $table1['name'];
-   //$outputName = "teset";
-  
-   $outputPlace =$table1['place'];
-   //print $outputName;
-   //print $outputPlace;
-   
-    if ($outputName === $name and $outputPlace === $place) {
-        echo "true";
-    }else{
-        echo "false";
-    }
-      }
-  ?>
-  
 <?php
 mysql_select_db('wateramount', $con);
 $quryset = mysql_query('SET NAMES utf8', $con);
@@ -81,8 +58,36 @@ $quryset = mysql_query('SELECT * FROM table1');
  
   }
   print "</tr>";
- print "</table>";
+
 ?>
+
+<?php
+  //http://www.tryphp.net/phpref-operators_comparison/
+ mysql_select_db('wateramount', $con);
+ $qury1 = mysql_query('SET NAMES utf8', $con);
+ $qury1 = mysql_query('SELECT * FROM inputdata');
+  while($table1 = mysql_fetch_assoc($qury1)) {
+   $outputName = $table1['name'];
+   $outputPlace =$table1['place'];
+   print "<tr>";
+   print "<td>$outputName</td>";
+   print "<td>$outputPlace</td>";
+   
+   //$outputName = "teset";
+  
+
+   //print $outputName;
+   //print $outputPlace;
+   
+    if ($outputName === $name and $outputPlace === $place) {
+        echo "true";
+    }else{
+        echo "false";
+    }
+      }
+       print "</table>";
+  ?>
+  
 
 
 </body>
