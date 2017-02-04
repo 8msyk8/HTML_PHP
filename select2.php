@@ -28,12 +28,16 @@ $date=$_GET['date'];
 $name=$_GET['name'];
 $place=$_GET['place'];
 $amount=$_GET['amount'];
+$dateFormat1 = str_replace('/', '-', $date);
+$dateFormat2 = str_replace('2017-', '', $dateFormat1);
 
 $con = mysql_connect('localhost', 'root', '');
-print $date;
+//print $date;
 print $name;
 print $place;
 print $amount;
+//print $dateFormat1;
+print $dateFormat2;
 
 
 mysql_select_db('wateramount', $con);
