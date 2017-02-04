@@ -21,19 +21,32 @@ print $place;
 print $amount;
 //print $dateFormat1;
 //print $dateFormat2;
-//'".$_POST['_key1']."','"$_POST['_key2']."'
+
 //data input
 $db=mysql_select_db('wateramount', $con);
-//$query = "INSERT INTO inputdata(date,name)VALUES('$dateFormat2','')";
 $query = "INSERT INTO inputdata(date,name,place,amount)VALUES('$dateFormat2','$name','$place','$amount')";
 $result = mysql_query($query); 
 ?>
 
+
+
+<?php
+  //http://www.tryphp.net/phpref-operators_comparison/
+ mysql_select_db('wateramount', $con);
+ $qury1 = mysql_query('SET NAMES utf8', $con);
+ $qury1 = mysql_query('SELECT * FROM inputdata');
+  while($table1 = mysql_fetch_assoc($qury1)) {
+   print $table1['name'];
+   print $table1['place'];
+  }
+  ?>
+  
 <?php
 mysql_select_db('wateramount', $con);
 $quryset = mysql_query('SET NAMES utf8', $con);
 $quryset = mysql_query('SELECT * FROM table1');
 //http://mikako.pupu.jp/?p=1142
+print $dateFormat2;
 print "<table border='1'>";
 print "<tr>";
 print "<th>名前</th>";
