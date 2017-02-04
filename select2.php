@@ -69,14 +69,20 @@ print "<th>場所/日付</th>";
      print $replace."<br />"."</th>";
   }
   print "</tr>";
-  print "<tr>";
-  print "<td>名前</td>";
-  print "<td>場所/日付</td>";
-  print "</tr>";
-
-  print "</table>";
   ?>
 
+<?php
+mysql_select_db('wateramount', $con);
+$quryset = mysql_query('SET NAMES utf8', $con);
+$quryset = mysql_query('SELECT * FROM table1');
+  print "<tr>";
+  while($table1 = mysql_fetch_assoc($quryset)) {
+  print "<td>名前</td>";
+ 
+  }
+  print "</tr>";
+ print "</table>";
+?>
 
 
 </body>
