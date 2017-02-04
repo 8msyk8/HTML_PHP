@@ -22,18 +22,12 @@
 		} );
 		// -->
 		//テキストボックスの文字を取得する
-
+// <input type="button" value="歓迎１" onclick="OnButtonClick()">　//日付確認
+     
 function OnButtonClick() {
             target = document.getElementById("jquery-ui-datepicker").value;
 			alert(target);
 }
-
-
-function DataSend(){
-		//データを次のファイルにエスケープして渡す。
-	location.href = "select2.html?" + escape(document.form1.text1.value);
-}
-
 
 	</script>
 	   
@@ -62,26 +56,13 @@ function DataSend(){
                     <input type = "text" name = "amount" value = "" required/>    
                 </div> 
              </div>    
-		<input type="submit" value="sendMessage" />
-
-        </form>   
-         <form id="loginForm" action="" method="post" onsubmit="return Login.doLogin(this)">
          <CENTER>
-        <input type="button" value="入力実行"style ="WIDTH:800px;HEIGHT:200px;font-size:30px;"/> 
-        </form>
-         </CENTER>
+		<input type="submit" value="入力実行" style ="WIDTH:800px;HEIGHT:200px;font-size:30px;/>
+		<input type="button" value="入力実行">
+        </CENTER>
+        </form>   
          
-			<a href="select2.php">
-				<INPUT TYPE="button" VALUE="送信11" onClick="DataSend();">
-			</a>
-         <input type="button" value="歓迎１" onclick="OnButtonClick()"><br>
          
-
-
-<FORM NAME="form1">
-<INPUT TYPE="text" NAME="text1" SIZE="80"><BR>
-<INPUT TYPE="button" VALUE="送信" onClick="DataSend();">
-</FORM>
 
          
     </body>    
