@@ -40,27 +40,29 @@ function DataSend(){
     <body>    
         <link href = "registration.css" type = "text/css" rel = "stylesheet" />    
         <h2>ì¸êÖó ä«óùâÊñ </h2>    
-        <form name = "form1" action="modified.php" method = "post" enctype = "multipart/form-data" >    
+                  <form action="select2.php" method="get">
             <div class = "container">
                 <div class = "form_group">    
                     <label>áT.ì˙ït:</label>    
-                    <input type="text" name="txtb"  id="jquery-ui-datepicker">    
+                    <input type="text" name="date"  id="jquery-ui-datepicker">    
                 </div>    
                 
                 <div class = "form_group">    
                     <label>áU.ñºëO:</label>    
-                    <input type = "text" name = "fname" value = "" required/>    
+                    <input type = "text" name = "name" value = "" required/>    
                 </div>    
                 <div class = "form_group">    
                     <label>áV.èÍèä:</label>    
-                    <input type = "text" name = "mname" value = "" required />    
+                    <input type = "text" name = "place" value = "" required />    
                 </div>    
                 <div class = "form_group">    
                     <label>áW.ì¸êÖó :</label>    
-                    <input type = "text" name = "lname" value = "" required/>    
+                    <input type = "text" name = "amount" value = "" required/>    
                 </div> 
              </div>    
-        </form>    
+		<input type="submit" value="sendMessage" />
+
+        </form>   
          <form id="loginForm" action="" method="post" onsubmit="return Login.doLogin(this)">
          <CENTER>
         <input type="button" value="ì¸óÕé¿çs"style ="WIDTH:800px;HEIGHT:200px;font-size:30px;"/> 
@@ -72,10 +74,7 @@ function DataSend(){
 			</a>
          <input type="button" value="äΩå}ÇP" onclick="OnButtonClick()"><br>
          
-          <form action="select2.php" method="get">
-				<INPUT TYPE="text" NAME="text2" SIZE="80"><BR>
-		<input type="submit" value="sendMessage" />
-</form>
+
 
 <FORM NAME="form1">
 <INPUT TYPE="text" NAME="text1" SIZE="80"><BR>

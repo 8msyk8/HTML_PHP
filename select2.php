@@ -23,11 +23,18 @@ function DataReceive(){
 window.onload = DataReceive;
 //-->
 </SCRIPT>
-test
 <?php
-$key=$_GET['text2'];
+$date=$_GET['date'];
+$name=$_GET['name'];
+$place=$_GET['place'];
+$amount=$_GET['amount'];
+
 $con = mysql_connect('localhost', 'root', '');
-print $key;
+print $date;
+print $name;
+print $place;
+print $amount;
+
 
 mysql_select_db('wateramount', $con);
 $quryset = mysql_query('SET NAMES utf8', $con);
