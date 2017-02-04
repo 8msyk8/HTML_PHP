@@ -36,8 +36,11 @@ $result = mysql_query($query);
  $qury1 = mysql_query('SET NAMES utf8', $con);
  $qury1 = mysql_query('SELECT * FROM inputdata');
   while($table1 = mysql_fetch_assoc($qury1)) {
-   print $table1['name'];
-   print $table1['place'];
+   $outputName = $table1['name'];
+   $outputPlace =$table1['place'];
+   print $outputName;
+   print $outputPlace;
+   
   }
   ?>
   
@@ -59,6 +62,11 @@ print "<th>場所/日付</th>";
      print $replace."<br />"."</th>";
   }
   print "</tr>";
+  print "<tr>";
+  print "<td>名前</td>";
+  print "<td>場所/日付</td>";
+  print "</tr>";
+
   print "</table>";
   ?>
 
