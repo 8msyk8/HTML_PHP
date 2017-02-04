@@ -16,9 +16,9 @@ $dateFormat2 = str_replace('2017-', '', $dateFormat1);
 
 $con = mysql_connect('localhost', 'root', '');
 //print $date;
-print $name;
-print $place;
-print $amount;
+//print $name;
+//print $place;
+//print $amount;
 //print $dateFormat1;
 //print $dateFormat2;
 
@@ -37,11 +37,18 @@ $result = mysql_query($query);
  $qury1 = mysql_query('SELECT * FROM inputdata');
   while($table1 = mysql_fetch_assoc($qury1)) {
    $outputName = $table1['name'];
+   //$outputName = "teset";
+  
    $outputPlace =$table1['place'];
-   print $outputName;
-   print $outputPlace;
+   //print $outputName;
+   //print $outputPlace;
    
-  }
+    if ($outputName === $name and $outputPlace === $place) {
+        echo "true";
+    }else{
+        echo "false";
+    }
+      }
   ?>
   
 <?php
