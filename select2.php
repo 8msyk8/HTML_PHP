@@ -71,12 +71,21 @@ $quryset = mysql_query('SELECT * FROM table1');
  mysql_select_db('wateramount', $con);
  $qury1 = mysql_query('SET NAMES utf8', $con);
  //$qury1 = mysql_query('SELECT * FROM inputdata');
- $qury1 = mysql_query('SELECT DISTINCT name,place FROM inputdata');
-
+ $qury1 = mysql_query('SELECT * FROM inputdata');
+$count = 0;
+$nextCount=1;  
   while($table1 = mysql_fetch_assoc($qury1)) {
    $outputName = $table1['name'];
    $outputPlace =$table1['place'];
-   $outputNameArray[] =  $outputName;
+   $outputDate = $table1['date'];
+   $outputAmount =$table1['amount'];
+   
+   $outputNameArray[] =    $outputName;
+   $outputPlaceArray[] =   $outputPlace;
+   $outputDateArray[] =    $outputDate;
+   $outputAmountArray[] =  $outputAmount;
+   
+   
    //print $outputNameArray[0]."outputarray";
    
    
